@@ -86,7 +86,7 @@ def upload(klant):
     sock.mysend(';')
     msg=''
     msg=msg+klant.nr+"|"+klant.klant+"|"+klant.adres+"|"+klant.gemeente+"|"+klant.u1+"|"+klant.telefoon+"|"+klant.gsm+"|"+klant.rekeningnr+"|"+klant.u2+"|"+klant.u3+"|"+klant.u4+";"
-    print 'sending '+ msg
+    print('sending '+ msg)
     sock.mysend(msg)
     # read the response
     bit=''
@@ -108,7 +108,7 @@ def insert(klant):
     sock.mysend(';')
     msg=''
     msg=msg+klant.nr+"|"+klant.klant+"|"+klant.adres+"|"+klant.gemeente+"|"+klant.u1+"|"+klant.telefoon+"|"+klant.gsm+"|"+klant.rekeningnr+"|"+klant.u2+"|"+klant.u3+"|"+klant.u4+";"
-    print 'sending '+ msg
+    print('sending '+ msg)
     sock.mysend(msg)
     # read the response
     bit=''
