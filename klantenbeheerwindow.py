@@ -77,8 +77,8 @@ class KlantenBeheerWindow(QtGui.QMainWindow, Ui_MainWindow):
         text=text[0:length]
         while(len(text) < length):
              text=text+' '
-        print len(text)
-        print repr(text)
+        print(len(text))
+        print(repr(text))
         return text
                 
     def keyPressEvent(self, event):
