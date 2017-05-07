@@ -1,0 +1,174 @@
+<ui version="4.0" >
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1290</width>
+    <height>633</height>
+   </rect>
+  </property>
+  <property name="windowTitle" >
+   <string>Klantenbeheer</string>
+  </property>
+  <widget class="QWidget" name="centralwidget" >
+   <property name="geometry" >
+    <rect>
+     <x>0</x>
+     <y>28</y>
+     <width>1290</width>
+     <height>584</height>
+    </rect>
+   </property>
+   <layout class="QGridLayout" name="gridLayout" >
+    <item row="0" column="0" >
+     <widget class="QTableWidget" name="tableWidget" >
+      <property name="columnCount" >
+       <number>11</number>
+      </property>
+      <column>
+       <property name="text" >
+        <string>nr</string>
+       </property>
+      </column>
+      <column>
+       <property name="text" >
+        <string>naam</string>
+       </property>
+      </column>
+      <column>
+       <property name="text" >
+        <string>adres</string>
+       </property>
+      </column>
+      <column>
+       <property name="text" >
+        <string>gemeente</string>
+       </property>
+      </column>
+      <column>
+       <property name="text" >
+        <string>u1</string>
+       </property>
+      </column>
+      <column>
+       <property name="text" >
+        <string>telefoon</string>
+       </property>
+      </column>
+      <column>
+       <property name="text" >
+        <string>gsm</string>
+       </property>
+      </column>
+      <column>
+       <property name="text" >
+        <string>rekeningnr</string>
+       </property>
+      </column>
+      <column>
+       <property name="text" >
+        <string>u2</string>
+       </property>
+      </column>
+      <column>
+       <property name="text" >
+        <string>u3</string>
+       </property>
+      </column>
+      <column>
+       <property name="text" >
+        <string>u4</string>
+       </property>
+      </column>
+     </widget>
+    </item>
+    <item row="1" column="0" >
+     <layout class="QHBoxLayout" name="horizontalLayout" >
+      <item>
+       <widget class="QPushButton" name="pushButton" >
+        <property name="text" >
+         <string>Nieuwe klant toevoegen</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer" >
+        <property name="orientation" >
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0" >
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar" >
+   <property name="geometry" >
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1290</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuReload" >
+    <property name="title" >
+     <string>data</string>
+    </property>
+    <addaction name="actionVernieuwen" />
+    <addaction name="actionWijzigingen_doorvoeren" />
+   </widget>
+   <addaction name="menuReload" />
+  </widget>
+  <widget class="QStatusBar" name="statusbar" >
+   <property name="geometry" >
+    <rect>
+     <x>0</x>
+     <y>612</y>
+     <width>1290</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <action name="actionVernieuwen" >
+   <property name="text" >
+    <string>laden</string>
+   </property>
+  </action>
+  <action name="actionWijzigingen_doorvoeren" >
+   <property name="text" >
+    <string>wijzigingen doorvoeren</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>addClient()</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>101</x>
+     <y>593</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>232</x>
+     <y>604</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>addClient()</slot>
+ </slots>
+</ui>
